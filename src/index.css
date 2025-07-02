@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans text-primary-900 bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply inline-flex items-center justify-center px-6 py-3 text-sm font-medium transition-colors rounded-none focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none;
+  }
+
+  .btn-primary {
+    @apply text-white bg-primary-950 hover:bg-primary-800 focus:ring-primary-950;
+  }
+
+  .btn-secondary {
+    @apply text-primary-950 bg-white border border-primary-200 hover:bg-primary-50 focus:ring-primary-950;
+  }
+
+  .btn-gold {
+    @apply text-primary-950 bg-gold-500 hover:bg-gold-400 focus:ring-gold-500;
+  }
+
+  .input {
+    @apply w-full px-4 py-3 text-sm border border-primary-200 rounded-none focus:outline-none focus:ring-2 focus:ring-primary-950;
+  }
+}
+
+@layer utilities {
+  .animate-enter {
+    @apply opacity-0 transition-opacity duration-300 ease-in-out;
+  }
+  
+  .animate-enter-active {
+    @apply opacity-100;
+  }
+}
